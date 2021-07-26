@@ -1,0 +1,2 @@
+rootProject.name = "Drawer_menu_kotlin"
+include ':app'

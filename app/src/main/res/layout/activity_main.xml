@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Design.Light.NoActionBar"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolBar"
+       android:background="@color/purple_500"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+       android:layout_width="match_parent"
+       android:layout_height="?android:attr/actionBarSize"/>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/DrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:context=".MainActivity">
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:layout_width="wrap_content"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_menu"
+            android:layout_height="match_parent"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</LinearLayout>
